@@ -58,3 +58,7 @@
         * If the user was saved, return true. Else, return false
 
 
+
+### Test your files by calling them in a 2nd file called test.js
+
+### Call each function twice from test.js

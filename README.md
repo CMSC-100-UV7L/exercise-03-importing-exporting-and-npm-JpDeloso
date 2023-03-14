@@ -64,4 +64,4 @@
 ### Call each function twice from test.js
 
 # Thoughts about the exercise:
-### The exercise was really fun and I was really able to see the importance of the lesson while I was coding. Furthermore, I was able to see how powerful export and import is and I could definitely see how I could utilize on my future projects. 
+### The exercise was really fun and I was really able to see the importance of the lesson while I was coding. Furthermore, I was able to see how powerful export and import is and I could definitely see how I could utilize it on my future projects. 

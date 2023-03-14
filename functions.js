@@ -5,6 +5,7 @@
 
 import { v4 as uuidv4 } from 'uuid';
 import isEmail from 'validator/lib/isEmail.js';
+import { appendFileSync } from 'node:fs';
 
 function generateUniqueID(firstName, lastName){
     var uniqueID = firstName.charAt(0).toLowerCase() 
@@ -18,6 +19,13 @@ function addAccount(account){
         if(account[0] != "" && account[1] != "" && account[2] != ""){
             if(isEmail(account[2])){
                 if(account[3] >= 18){
+                    var account = account[0] + "," + account[1] + "," + account[2] + "," + account[3] + "," + generateUniqueID(account[0], account[1]);
+                    try {
+                        appendFileSync('users.txt', account + "\n");
+                        console.log('Successfully added the account');
+                      } catch (err) {
+                        console.log("An error occured while adding the account")
+                      }
                     return true;
                 }else{
                     console.log("Age should be at least 18 years old")
@@ -38,5 +46,4 @@ function addAccount(account){
     }
 }
 
-console.log(addAccount(["Alan", "Turing", "aturing@w3c.com", 23]));
-console.log(generateUniqueID("Allan", "Turing"));   
+console.log(addAccount(["Alan", "Turing", "aturing@w3c.com",23]));

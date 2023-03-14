@@ -46,4 +46,4 @@ function addAccount(account){
     }
 }
 
-console.log(addAccount(["Alan", "Turing", "aturing@w3c.com",23]));
+export default addAccount
